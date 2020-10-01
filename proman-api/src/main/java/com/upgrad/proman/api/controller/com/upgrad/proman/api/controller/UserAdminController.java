@@ -28,7 +28,10 @@ public class UserAdminController {
     @RequestMapping(method = RequestMethod.GET, path = "/users/{id}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity<UserDetailsResponse> getUser(@PathVariable("id") final String userUuid, @RequestHeader("authorization") final String authorization) throws ResourceNotFoundException, UnauthorizedException {
 
-        final UserEntity userEntity = userAdminBusinessService.getUser(userUuid, authorization);
+
+        String[] bearerToken = authorization.split("Bearer");
+
+        final UserEntity userEntity = userAdminBusinessService.getUser(userUuid, bearerToken[1]);
         UserDetailsResponse userDetailsResponse = new UserDetailsResponse().id(userEntity.getUuid()).firstName(userEntity.getFirstName())
                 .lastName(userEntity.getLastName()).emailAddress(userEntity.getEmail())
                 .mobileNumber(userEntity.getMobilePhone()).status(UserStatusType.valueOf(UserStatus.getEnum(userEntity.getStatus()).name()));
