@@ -1,3 +1,4 @@
+com\upgrad\proman\api\exception\RestExceptionHandler.class
 com\upgrad\proman\api\controller\SignUpController.class
 com\upgrad\proman\api\model\UserOperationRequest$PathEnum.class
 io\swagger\configuration\HomeController.class
@@ -8,7 +9,7 @@ com\upgrad\proman\api\model\CreateUserRequest.class
 com\upgrad\proman\api\model\RoleRequest.class
 io\swagger\api\ApiResponseMessage.class
 com\upgrad\proman\api\model\UserOperationRequest.class
-com\upgrad\proman\api\controller\UserAdminController.class
+com\upgrad\proman\api\controller\com\upgrad\proman\api\controller\UserAdminController.class
 com\upgrad\proman\api\config\SwaggerConfiguration.class
 com\upgrad\proman\api\model\UserOperationsRequest.class
 com\upgrad\proman\api\model\UsersSummaryResponse.class
@@ -21,6 +22,7 @@ io\swagger\Swagger2SpringBoot$ExitException.class
 com\upgrad\proman\api\model\UserDetailsResponse.class
 com\upgrad\proman\api\model\UserSummaryType.class
 io\swagger\api\NotFoundException.class
+com\upgrad\proman\api\model\AuthorizedUserResponse.class
 com\upgrad\proman\api\PromanApiApplication.class
 io\swagger\RFC3339DateFormat.class
 com\upgrad\proman\api\model\UpdateUserRequest.class
@@ -28,4 +30,5 @@ io\swagger\api\ApiException.class
 com\upgrad\proman\api\model\UserStatusType.class
 io\swagger\configuration\SwaggerDocumentationConfig.class
 com\upgrad\proman\api\model\PermissionsType.class
+com\upgrad\proman\api\controller\com\upgrad\proman\api\controller\AuthenticationController.class
 com\upgrad\proman\api\model\SignupUserRequest.class

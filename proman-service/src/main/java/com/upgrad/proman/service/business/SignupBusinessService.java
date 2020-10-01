@@ -15,10 +15,17 @@ public class SignupBusinessService {
     @Autowired
     private UserDao userDao;
 
+    @Autowired
+    private PasswordCryptographyProvider cryptographyProvider;
+
+    @Autowired
+    private UserAdminBusinessService userAdminBusinessService;
+
     @Transactional(propagation = Propagation.REQUIRED)
     public UserEntity signup(UserEntity userEntity) {
 
-        return userDao.createUser(userEntity);
+        return userAdminBusinessService.createUser(userEntity);
+
 
     }
 }
